@@ -27,7 +27,7 @@
 
   /* Nav styling */
   nav {
-    display: flex;
+    display: none;
     gap: 20px;
   }
 
@@ -43,7 +43,7 @@
 
   /* Hamburger Menu Icon */
   .menu-icon {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     width: 30px;
@@ -183,16 +183,12 @@
 
   /* Responsive Rules */
   @media (max-width: 768px) {
-  nav {
+    nav {
       display: none;
     }
 
-    .menu-icon {
-      display: flex;
-    }
-    
-    hero h2 {
-        font-size: 36px;
+    .hero h2 {
+      font-size: 36px;
     }
         
   }
