@@ -308,3 +308,19 @@
   .login-card .back-link:hover {
     color: #fff;
   }
+
+  .signup-note {
+    margin-top: 20px;
+    text-align: center;
+    color: #ccc;
+  }
+
+  .signup-note a {
+    color: #FF6F61;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .signup-note a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+  }
