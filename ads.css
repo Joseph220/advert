@@ -30,16 +30,29 @@
   nav {
     display: none;
     gap: 20px;
+    align-items: center;
   }
 
   nav a {
     color: #f5f5f5;
     text-decoration: none;
     transition: color 0.3s;
+    font-weight: 500;
   }
 
   nav a:hover {
     color: #FF6F61;
+  }
+
+  .login-link {
+    padding: 10px 18px;
+    background-color: #FF6F61;
+    border-radius: 6px;
+    color: #fff;
+  }
+
+  .login-link:hover {
+    background-color: #e85c50;
   }
 
   
@@ -214,5 +227,84 @@
     .hero h2 {
       font-size: 36px;
     }
-        
+  }
+
+  @media (min-width: 769px) {
+    nav {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+  }
+
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: linear-gradient(to right, #121212, #1f1f1f);
+    padding: 40px 20px;
+  }
+
+  .login-card {
+    background-color: #181818;
+    padding: 40px;
+    border-radius: 18px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  }
+
+  .login-card h2 {
+    color: #FF6F61;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .login-card p {
+    color: #ccc;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .login-card input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #1e1e1e;
+    color: #f5f5f5;
+  }
+
+  .login-card button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF6F61;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .login-card button:hover {
+    background-color: #e85c50;
+  }
+
+  .login-card .back-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #ccc;
+  }
+
+  .login-card .back-link:hover {
+    color: #fff;
   }

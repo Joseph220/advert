@@ -9,7 +9,14 @@
 <body>
  
  <header>
-  <h1>AdVibe</h1>
+  <h1><a href="ads.html">AdVibe</a></h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <a class="login-link" href="login.html">Login</a>
+  </nav>
 
   <!-- Hamburger Icon -->
   <div class="menu-icon" onclick="toggleMenu()">
@@ -24,6 +31,7 @@
     <a href="#services" onclick="toggleMenu()">Services</a>
     <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="login.html" onclick="toggleMenu()">Login</a>
   </div>
 </header>
 
@@ -33,7 +41,7 @@
   <div>
     <h2>We Build Brands That Inspire</h2>
     <p>Creative advertising solutions for the modern world.</p>
-    <a href="#contact" class="btn">Let's Talk</a>
+    <a href="#contact" class="btn require-login">Let's Talk</a>
   </div>
 </section>
 
@@ -103,7 +111,17 @@
     const mobileMenu = document.getElementById('mobileMenu');
     mobileMenu.classList.toggle('show');
   }
+
+  // Require login before showing the home page
+  (function () {
+    const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+    if (!isLoggedIn) {
+      const target = window.location.pathname.split('/').pop() || 'ads.html';
+      window.location.href = 'login.html?next=' + encodeURIComponent(target);
+    }
+  })();
 </script>
 </body>
 </html>
   
+ 
